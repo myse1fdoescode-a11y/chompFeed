@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ba3a0824a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>ChompFeed</title>
+    </head>
+    <body class="d-flex">
+        <nav class="side-bar">
+            <button class="menu-item primary-hover btn" onclick="showSection('new-post')" id="create-post-btn"><i class="fa-solid fa-circle-plus"></i></button>
+            <button class="menu-item primary-hover btn" onclick="showSection('posts')"><i class="fa-solid fa-house-chimney"></i></button>
+            <button class="menu-item primary-hover btn" onclick="showSection('search')"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="menu-item primary-hover btn" onclick="showSection('info')"><i class="fa-solid fa-info"></i></button>
+            <button class="menu-item primary-hover btn" onclick="showSection('settings')" style="margin-top: 4rem;"><i class="fa-solid fa-gear"></i></button>
+        </nav>
+        <main class="d-flex flex-column align-items-center">
+            <h1 id="brand">ChompFeed</h1>
+            <section id="new-post" class="hidden">
+                <form>
+                    <figure>
+                        <div id="preview-container" style="-webkit-tap-highlight-color: transparent;">
+                            <img id="image-preview" src="Fill-Images/post-image.png" alt="post photo not selected">
+                            <p>click here to upload a photo</p>
+                        </div>
+                        <input type="file" id="image-input" accept="image/*" style="display: none;">
+                    </figure>
+                    <figure>
+                        <figcaption>Caption</figcaption>
+                        <input type="text">
+                        <p>Type hashtags after the caption to help the program group like posts.</p>
+                    </figure>
+                    <button class="btn btn-primary" id="submit-post" type="submit">Create Post</button>
+                </form>
+            </section>
+            <section id="posts" class="hidden">
+                <h1>all posts</h1>
+            </section>
+            <section id="search" class="">
+                <input type="text" placeholder="Search" name="search-bar" id="search-bar" class="search-bar">
+                <section class="results d-flex flex-column"></section>
+            </section>
+            <section id="info" class="d-flex flex-column align-items-center hidden">
+                <h1>Welcome to ChompFeed</h1>
+                <article class="info align-self-start">
+                    <h3>Title</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <h3>Title</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <h3>Title</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="settings" class="hidden">
+                <h1 class="system-text">Settings</h1>
+                <div id="dark-mode-switch">
+                    <span class="switch-ball"></span>
+                </div>
+            </section>
+        </main>
+        <!-- For Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
