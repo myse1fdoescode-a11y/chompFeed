@@ -10,66 +10,83 @@
     </head>
     <body class="d-flex">
         <nav class="side-bar">
-            <button class="menu-item primary-hover btn" onclick="showSection('new-post')" id="create-post-btn"><i class="fa-solid fa-circle-plus"></i></button>
+            <button class="menu-item btn" onclick="showSection('new-post')" id="create-post-btn"><i class="fa-solid fa-circle-plus"></i></button>
             <button class="menu-item primary-hover btn" onclick="showSection('posts')"><i class="fa-solid fa-house-chimney"></i></button>
             <button class="menu-item primary-hover btn" onclick="showSection('search')"><i class="fa-solid fa-magnifying-glass"></i></button>
             <button class="menu-item primary-hover btn" onclick="showSection('info')"><i class="fa-solid fa-info"></i></button>
-            <button class="menu-item primary-hover btn" onclick="showSection('settings')" style="margin-top: 4rem;"><i class="fa-solid fa-gear"></i></button>
+            <button class="menu-item primary-hover btn settings" onclick="showSection('settings')"><i class="fa-solid fa-gear"></i></button>
         </nav>
         <main class="d-flex flex-column align-items-center">
-            <h1 id="brand">ChompFeed</h1>
+            <div id="brand" class="d-flex flex-column align-items-center">
+                <img src="Fill-Images/dino-head-top.png" alt="">
+                <h1>ChompFeed</h1>
+                <img src="Fill-Images/dino-head-bottom.png" alt="">
+            </div>
+            <div id="select-user-name">
+                <p class="system-text">Please create a user name for the best experiance</p>
+                <input type="text" name="set-user-name-input" placeholder="User Name" id="set-user-name-input">
+                <div class="button-container">
+                    <button class="btn">Continue as guest</button>
+                    <button class="btn" id="username-submit" type="submit">Set User Name</button>
+                </div>
+            </div>
             <section id="new-post" class="hidden">
                 <form>
                     <figure>
                         <div id="preview-container" style="-webkit-tap-highlight-color: transparent;">
                             <img id="image-preview" src="Fill-Images/post-image.png" alt="post photo not selected">
-                            <p>click here to upload a photo</p>
                         </div>
                         <input type="file" id="image-input" accept="image/*" style="display: none;">
                     </figure>
-                    <figure>
+                    <figure class="caption-input">
                         <figcaption>Caption</figcaption>
-                        <input type="text">
-                        <p>Type hashtags after the caption to help the program group like posts.</p>
+                        <input type="text" name="caption-text" id="caption-text-input" required>
+                        <p class="system-text">Type hashtags after the caption to help the program group like posts.</p>
                     </figure>
-                    <button class="btn btn-primary" id="submit-post" type="submit">Create Post</button>
+                    <div class="submit-wrapper">
+                        <button class="btn btn-primary" id="submit-post" type="submit">Create Post</button>
+                    </div>
                 </form>
             </section>
-            <section id="posts" class="hidden">
+            <section id="posts" class="hidden d-flex flex-column align-items-center">
                 <h1>all posts</h1>
             </section>
-            <section id="search" class="">
+            <section id="search" class="hidden">
                 <input type="text" placeholder="Search" name="search-bar" id="search-bar" class="search-bar">
-                <section class="results d-flex flex-column"></section>
+                <div id="search-result-container" class="d-flex flex-column"></div>
             </section>
             <section id="info" class="d-flex flex-column align-items-center hidden">
                 <h1>Welcome to ChompFeed</h1>
                 <article class="info align-self-start">
-                    <h3>Title</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <h2 class="info-heading">Create Posts</h2>
+                    <ul class="info-text">
+                        <li>Give it a photo</li>
+                        <li>Add a caption and some hashtags</li>
+                        <li>Click or Press the 'Submit' button and find it on the feed(home)</li>
                     </ul>
-                    <h3>Title</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <h3 class="info-heading">Search for a post</h3>
+                    <ul class="info-text">
+                        <li>Enter a hashtag</li>
+                        <li>or a user's name</li>
+                        <li>or the caption of the post</li>
+                        <li>then click on the results that drop down from <br>the search bar to view the appropriate posts</li>
                     </ul>
-                    <h3>Title</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <h3 class="info-heading">Change your preferences in 'Settings'</h3>
+                    <ul class="info-text">
+                        <li>Go to the settings tab</li>
+                        <li>There you can toggle the dark mode feature</li>
                     </ul>
                 </article>
             </section>
             <section id="settings" class="hidden">
                 <h1 class="system-text">Settings</h1>
-                <div id="dark-mode-switch">
-                    <span class="switch-ball"></span>
-                </div>
+                <div class="devider"></div>
+                <figure class="switch-wrapper">
+                    <figcaption><h4 class="system-text">Dark Mode</h4></figcaption>
+                    <div id="dark-mode-switch" class="off">
+                        <span class="switch-ball"></span>
+                    </div>
+                </figure>
             </section>
         </main>
         <!-- For Bootstrap -->
