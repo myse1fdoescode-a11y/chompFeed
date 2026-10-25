@@ -519,4 +519,7 @@ span.switch-ball {
     #image-preview {
         width: 80vw;
     }
+    .comment-heading {
+        width: 200px;
+    }
 }

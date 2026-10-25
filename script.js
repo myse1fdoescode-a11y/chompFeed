@@ -561,7 +561,7 @@ const starterCommentsByPost = {
 }
 
 const starterCommenters = [
-    "maya_reads", "devon_k", "skylar22", "alexcreates", "Livy", "IKnowWhereYouLive", 
+    "maya_reads", "devon_k", "skylar22", "alexcreates", "Livy", "jburner", 
     "pixelpanda", "riverstone", "taco_tuesday", "moonlitmoss", "copperfox", 
     "cloudyday", "snackwizard", "mapleleaf", "orbitrunner", "bluejay_ben"
 ]
